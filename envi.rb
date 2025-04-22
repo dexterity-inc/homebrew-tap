@@ -5,23 +5,23 @@
 class Envi < Formula
   desc "CLI tool to push and pull .env files to/from GitHub Gists"
   homepage "https://github.com/dexterity-inc/envi"
-  version "1.0.10"
+  version "1.0.11"
   license "MIT"
 
   depends_on "go" => :build
 
   on_macos do
     on_intel do
-      url "https://github.com/dexterity-inc/envi/releases/download/v1.0.10/envi-darwin-amd64.tar.gz"
-      sha256 "6994607788f8d530221520d18669653bacaffedf0e159da6d43215e27c09b479"
+      url "https://github.com/dexterity-inc/envi/releases/download/v1.0.11/envi-darwin-amd64.tar.gz"
+      sha256 "e640ea4a37f7d146c9e5fc5cd817fbd55c94c143c9b6fe42af3d4aa3c1b9b823"
 
       def install
         system "go", "build", *std_go_args
       end
     end
     on_arm do
-      url "https://github.com/dexterity-inc/envi/releases/download/v1.0.10/envi-darwin-arm64.tar.gz"
-      sha256 "c46a807cb94c3ca634f6da5df11d40926fc290af6b4a19d2e698b7c7679b72ca"
+      url "https://github.com/dexterity-inc/envi/releases/download/v1.0.11/envi-darwin-arm64.tar.gz"
+      sha256 "fd3321173a5536cc12ca35a2ec9180de9a1e689d0901cfedae7350f936232548"
 
       def install
         system "go", "build", *std_go_args
@@ -32,8 +32,8 @@ class Envi < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dexterity-inc/envi/releases/download/v1.0.10/envi-linux-amd64.tar.gz"
-        sha256 "c36ffd2439235a642be9205bfe064ef61154ee1a15e0110787fffea251656a3e"
+        url "https://github.com/dexterity-inc/envi/releases/download/v1.0.11/envi-linux-amd64.tar.gz"
+        sha256 "471bb000157c58fdeab5f372d74455c1a37a0f3b883f06a16af8ac559046b31b"
 
         def install
           system "go", "build", *std_go_args
@@ -42,8 +42,8 @@ class Envi < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dexterity-inc/envi/releases/download/v1.0.10/envi-linux-arm64.tar.gz"
-        sha256 "4b54aef32348d90eee9aeffbf1603f321472309f5f54e42ab603b233af35aefb"
+        url "https://github.com/dexterity-inc/envi/releases/download/v1.0.11/envi-linux-arm64.tar.gz"
+        sha256 "40c4566ce9186f59bad7a2de7032554777f0e8dc403ab19a2b7631d0e147f711"
 
         def install
           system "go", "build", *std_go_args
