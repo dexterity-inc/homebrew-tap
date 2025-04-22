@@ -5,26 +5,26 @@
 class Envi < Formula
   desc "CLI tool to push and pull .env files to/from GitHub Gists"
   homepage "https://github.com/dexterity-inc/envi"
-  version "1.0.16"
+  version "1.0.17"
   license "MIT"
 
   depends_on "go" => :build
 
   on_macos do
     on_intel do
-      url "https://github.com/dexterity-inc/envi/releases/download/v1.0.16/envi-darwin-amd64.tar.gz"
-      sha256 "5b9b7d05499b8bd4f03fef52218bb9a6475e1d0c2bd5c1646b248f2c3138efd7"
+      url "https://github.com/dexterity-inc/envi/releases/download/v1.0.17/envi-darwin-amd64.tar.gz"
+      sha256 "18f6789ffa2ce0c85f0bd86f3be04892020b00a82991b9e29cfa213922f75bb2"
 
       def install
-        system "go", "build", *std_go_args
+        bin.install "envi"
       end
     end
     on_arm do
-      url "https://github.com/dexterity-inc/envi/releases/download/v1.0.16/envi-darwin-arm64.tar.gz"
-      sha256 "8ef3280b094c73151975aa8808c64d67e8ba820f758f29843093b906ee9892a6"
+      url "https://github.com/dexterity-inc/envi/releases/download/v1.0.17/envi-darwin-arm64.tar.gz"
+      sha256 "06caa3cb8a824db622b5cfa42f80328fbc59e27c7fc733621fde5d5661d1e3b8"
 
       def install
-        system "go", "build", *std_go_args
+        bin.install "envi"
       end
     end
   end
@@ -32,21 +32,21 @@ class Envi < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dexterity-inc/envi/releases/download/v1.0.16/envi-linux-amd64.tar.gz"
-        sha256 "5d0ce8f7e584a275864d8f517e68add1093cfa2c3e876c1d075b9315d7f1723a"
+        url "https://github.com/dexterity-inc/envi/releases/download/v1.0.17/envi-linux-amd64.tar.gz"
+        sha256 "194df3aef9f0f0f019bda6037caf8c8d88b39e1a298292d38458d46d80eb34d2"
 
         def install
-          system "go", "build", *std_go_args
+          bin.install "envi"
         end
       end
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dexterity-inc/envi/releases/download/v1.0.16/envi-linux-arm64.tar.gz"
-        sha256 "d45f3a3d62ba5f6a2a0224fa0287ea69d85a663fe03d3a5d6fe095abdd463e15"
+        url "https://github.com/dexterity-inc/envi/releases/download/v1.0.17/envi-linux-arm64.tar.gz"
+        sha256 "8c2ebd05f8dca8f98715a1c1e25c852a4e948773cc275bbe17c867364c77d41f"
 
         def install
-          system "go", "build", *std_go_args
+          bin.install "envi"
         end
       end
     end
