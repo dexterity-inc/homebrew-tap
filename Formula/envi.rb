@@ -5,23 +5,23 @@
 class Envi < Formula
   desc "CLI tool to push and pull .env files to/from GitHub Gists"
   homepage "https://github.com/dexterity-inc/envi"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   depends_on "go" => :build
 
   on_macos do
     on_intel do
-      url "https://github.com/dexterity-inc/envi/releases/download/v1.0.0/envi-darwin-amd64.tar.gz"
-      sha256 "9eece1b2eea0968505658ab2b6df82db83ddc3fc10db5bf7a036f77841dc3077"
+      url "https://github.com/dexterity-inc/envi/releases/download/v1.0.1/envi-darwin-amd64.tar.gz"
+      sha256 "9ff4132a58db2c6bafdc9184d2c5372b1a0a3f4b47654bf01d6eb213fee6be45"
 
       def install
         bin.install "envi"
       end
     end
     on_arm do
-      url "https://github.com/dexterity-inc/envi/releases/download/v1.0.0/envi-darwin-arm64.tar.gz"
-      sha256 "cc3bd7124e96cf39fba87e23f625d7625b3ab4b2a5bdb611b9df17103da36d36"
+      url "https://github.com/dexterity-inc/envi/releases/download/v1.0.1/envi-darwin-arm64.tar.gz"
+      sha256 "b94e48e3abf144fff071312db905e79ffd17cdae26c1a146dd2c0e52d8f4f416"
 
       def install
         bin.install "envi"
@@ -32,8 +32,8 @@ class Envi < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dexterity-inc/envi/releases/download/v1.0.0/envi-linux-amd64.tar.gz"
-        sha256 "8070bcf01ccde07b8dcfa3156e4cead3f327d5a69dced4f1cadc9d591fa1e902"
+        url "https://github.com/dexterity-inc/envi/releases/download/v1.0.1/envi-linux-amd64.tar.gz"
+        sha256 "3652d0db7263e0f18731d89be0f146d002d6160236b308397cf7200c59f3c660"
 
         def install
           bin.install "envi"
@@ -42,8 +42,8 @@ class Envi < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dexterity-inc/envi/releases/download/v1.0.0/envi-linux-arm64.tar.gz"
-        sha256 "2506cfc09bac4d3cec2621eed92a5576d1e35ca2876b00846414b3e779e4a772"
+        url "https://github.com/dexterity-inc/envi/releases/download/v1.0.1/envi-linux-arm64.tar.gz"
+        sha256 "e583b96c13cb2ba3ba72f4a4ecf435ca9aa522660839b47077653c3baafe00e2"
 
         def install
           bin.install "envi"
